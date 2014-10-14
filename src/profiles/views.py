@@ -1,6 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
 
 def home(request):
 
@@ -12,12 +11,12 @@ def home(request):
 def about(request):
 
     context = locals()
-    template = 'home.html'
+    template = 'about.html'
     return render(request, template, context)
 
 
 def contact(request):
 
     context = locals()
-    template = 'home.html'
+    template = 'contact.html'
     return render(request, template, context)

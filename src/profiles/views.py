@@ -2,21 +2,18 @@ from django.shortcuts import render
 
 
 def home(request):
-
     context = locals()
     template = 'home.html'
     return render(request, template, context)
 
 
-def about(request):
-
+def contact(request):
     context = locals()
-    template = 'about.html'
+    template = 'contact.html'
     return render(request, template, context)
 
 
-def contact(request):
-
+def about(request):
     context = locals()
-    template = 'contact.html'
+    template = 'about.html'
     return render(request, template, context)

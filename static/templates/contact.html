@@ -5,8 +5,16 @@
 {% endblock content2 %}
 
 {% block content %}
-  <h1>Contact Us</h1>
-  <form method='POST' action=''> {% csrf_token %}
-  {{ form.as_p }}
-  <input type='submit' value='Send' class='btn btn-default' />
+  <h1>{{ title }}</h1>
+
+  {% if confirm_message %}
+    <p>{{ confirm_message }}</p>
+  {% endif %}
+
+  {% if form %}
+    <form method='POST' action=''> {% csrf_token %}
+    {{ form.as_p }}
+    <input type='submit' value='Send' class='btn btn-default' />
+  {% endif %}
+
 {% endblock content %}
